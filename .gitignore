@@ -1,0 +1,4 @@
+# directorios
+/node_modules/*
+!Doc/.md
+!Listos/.md
