@@ -11,9 +11,9 @@ async function mergeToPdf(doc) {
 
   const merger = new PDFMerger();
   await Promise.all([
-    merger.add(`./Doc/${doc}/${doc}.pdf`),
-    merger.add(`./Doc/${doc}/HC.pdf`),
-    merger.add(`./Doc/${doc}/ADRES.pdf`),
+    await merger.add(`./Doc/${doc}/${doc}.pdf`),
+    await merger.add(`./Doc/${doc}/HC.pdf`),
+    await merger.add(`./Doc/${doc}/ADRES.pdf`),
   ]);
   await merger.save(path.join(directorio, `${doc}.pdf`));
   console.log("Lista:", doc);
